@@ -1,0 +1,138 @@
+/* Sailorlyf compliance site — system fonts, no external assets */
+:root {
+  --navy: #16283f;
+  --navy-soft: #33465e;
+  --accent: #1f4e79;
+  --muted: #5b6b7d;
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --border: #dde5ec;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.brand .tagline {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+nav.site-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.92rem;
+}
+
+nav.site-nav a:first-child { margin-left: 0; }
+nav.site-nav a:hover { text-decoration: underline; }
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 32px 0 8px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 32px 0 8px;
+  color: var(--navy);
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 20px 0 6px;
+  color: var(--navy-soft);
+}
+
+p { margin-bottom: 12px; }
+
+ul, ol { margin: 0 0 12px 20px; }
+li { margin-bottom: 4px; }
+
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.note {
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  background: var(--card);
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+footer.site-footer {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+footer.site-footer a { margin: 0 6px; }
+
+/* small screens */
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  nav.site-nav a { margin-left: 10px; }
+  .container { padding: 20px 16px 40px; }
+}
